@@ -3223,7 +3223,7 @@ var_label(Niger_pdm_2019$rCSI) <- "rCSI"
 
 Households are divided in four classes according to the rCSI score: 0-3, 4-18, and 19 and above which correspond to IPC Phases 1, 2 and 3 and above respectively.
 
-```{r rcsi_class}
+```{r rcsi_class_1}
 Niger_baseline_2018 <- Niger_baseline_2018 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3234,7 +3234,7 @@ Niger_baseline_2018 %>%
   sjPlot::plot_frq(coord.flip =T,rcsi_class,show.na = T)
 
 ```
-```{r rcsi_class}
+```{r rcsi_class_2}
 Niger_ea_2019 <- Niger_ea_2019 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3246,7 +3246,7 @@ Niger_ea_2019 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_3}
 Niger_ea_2020 <- Niger_ea_2020 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3258,7 +3258,7 @@ Niger_ea_2020 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_4}
 Niger_ea_2021 <- Niger_ea_2021 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3270,7 +3270,7 @@ Niger_ea_2021 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_5}
 Niger_pdm_2021 <- Niger_pdm_2021 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3282,7 +3282,7 @@ Niger_pdm_2021 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_6}
 Niger_pdm_2022 <- Niger_pdm_2022 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3294,7 +3294,7 @@ Niger_pdm_2022 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_7}
 Niger_pdm_2020 <- Niger_pdm_2020 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -3306,7 +3306,7 @@ Niger_pdm_2020 %>%
 
 ```
 
-```{r rcsi_class}
+```{r rcsi_class_8}
 Niger_pdm_2019 <- Niger_pdm_2019 %>% mutate(
   rcsi_class = case_when(
     rCSI <= 3 ~ 1, between(rCSI, 3.5 , 18.5) ~ 2, rCSI > 18.5 ~ 3))
@@ -4836,7 +4836,7 @@ Niger_pdm_2019 <- Niger_pdm_2019 %>%
 # ASSET BENEFIT INDICATOR (ABI) 
 
 # Gender recodification
-```{r Gender recodification Niger_baseline_2018}
+```{r Gender recodification_1 Niger_baseline_2018}
 # We need to recode gender label to:
 # 0 = Femme
 # 1 = Homme
@@ -4856,7 +4856,7 @@ Niger_baseline_2018 %>%
   plot_frq(coord.flip =T,ABISexparticipant)
 ```
 
-```{r Gender recodification Niger_ea_2019}
+```{r Gender recodification_2 Niger_ea_2019}
 #View labels
 expss::val_lab(Niger_ea_2019$ABISexparticipant)
 Niger_ea_2019 %>% 
@@ -4872,7 +4872,7 @@ Niger_ea_2019 %>%
 
 ```
 
-```{r Gender recodification Niger_ea_2020}
+```{r Gender recodification_3 Niger_ea_2020}
 #View labels
 expss::val_lab(Niger_ea_2020$ABISexparticipant)
 #Niger_ea_2020 %>% 
@@ -4886,7 +4886,7 @@ expss::val_lab(Niger_ea_2020$ABISexparticipant)
 
 ```
 
-```{r Gender recodification Niger_ea_2021}
+```{r Gender recodification_4 Niger_ea_2021}
 #View labels
 expss::val_lab(Niger_ea_2021$ABISexparticipant)
 Niger_ea_2021 %>% 
@@ -4901,7 +4901,7 @@ Niger_ea_2021 %>%
 
 ```
 
-```{r Gender recodification Niger_pdm_2019}
+```{r Gender recodification_5 Niger_pdm_2019}
 
 expss::val_lab(Niger_pdm_2019$ABISexparticipant)
 Niger_pdm_2019 %>% 
@@ -4913,7 +4913,7 @@ Niger_pdm_2019 %>%
   plot_frq(coord.flip =T,ABISexparticipant)
 
 ```
-```{r Gender recodification Niger_pdm_2020}
+```{r Gender recodification_6 Niger_pdm_2020}
 
 expss::val_lab(Niger_pdm_2020$ABISexparticipant)
 'Niger_pdm_2020 %>% 
@@ -4929,7 +4929,7 @@ expss::val_lab(Niger_pdm_2020$ABISexparticipant)
 
 
 
-```{r Gender recodification Niger_pdm_2021}
+```{r Gender recodification_7 Niger_pdm_2021}
 #View labels
 expss::val_lab(Niger_pdm_2021$ABISexparticipant)
 Niger_pdm_2021 %>% 
@@ -4944,7 +4944,7 @@ Niger_pdm_2021 %>%
 
 ```
 
-```{r Gender recodification Niger_pdm_2022}
+```{r Gender recodification_8 Niger_pdm_2022}
 #View labels
 expss::val_lab(Niger_pdm_2022$ABISexparticipant)
 'Niger_pdm_2022 %>% 
@@ -5771,7 +5771,7 @@ Niger_pdm_2019 <-
 
 ## Type d'assistance
 
-```{r Type d'assistance Niger_baseline_2018}
+```{r }
 var_type_assistance = c("BanqueCerealiere",
 "TransfBenef",
 "VivreContreTravail",
@@ -5803,7 +5803,7 @@ Niger_baseline_2018 <- Niger_baseline_2018 %>%
                   "NSP" = 3))))
 
 ```
-```{r Type d'assistance Niger_ea_2019}
+```{r }
 expss::val_lab(Niger_ea_2019$BanqueCerealiere)
 unique(Niger_ea_2019$BanqueCerealiere)
 
@@ -5815,7 +5815,7 @@ Niger_ea_2019 <- Niger_ea_2019 %>%
                   "Oui, AUtre" = 2,
                   "NSP" = 3))))
 ```
-```{r Type d'assistance Niger_ea_2020}
+```{r }
 expss::val_lab(Niger_ea_2020$BanqueCerealiere)
 unique(Niger_ea_2020$BanqueCerealiere)
 
@@ -5828,7 +5828,7 @@ Niger_ea_2020 <- Niger_ea_2020 %>%
                   "NSP" = 3))))
 ```
 
-```{r Type d'assistance Niger_ea_2021}
+```{r }
 expss::val_lab(Niger_ea_2021$BanqueCerealiere)
 unique(Niger_ea_2021$BanqueCerealiere)
 
@@ -5844,7 +5844,7 @@ Niger_ea_2021 <- Niger_ea_2021 %>%
                   "NSP" = 3))))
 ```
 
-```{r Type d'assistance Niger_pdm_2021}
+```{r }
 expss::val_lab(Niger_pdm_2021$BanqueCerealiere)
 unique(Niger_pdm_2021$BanqueCerealiere)
 
@@ -5860,7 +5860,7 @@ Niger_pdm_2021 <- Niger_pdm_2021 %>%
                   "NSP" = 3))))
 ```
 
-```{r Type d'assistance Niger_pdm_2022}
+```{r }
 expss::val_lab(Niger_pdm_2022$BanqueCerealiere)
 unique(Niger_pdm_2022$BanqueCerealiere)
 
@@ -5958,7 +5958,7 @@ unique(Niger_pdm_2019$BoursesAdo)
 
 
 
-```{r Type d'assistance Niger_pdm_2020}
+```{r }
 
 var_type_assistance = c("BanqueCerealiere",
 "TransfBenef",
@@ -5992,7 +5992,7 @@ Niger_pdm_2020 <- Niger_pdm_2020 %>%
                  "NSP" = 3))))
 ```
 
-```{r Type d'assistance Niger_pdm_2019}
+```{r }
 expss::val_lab(Niger_pdm_2019$BanqueCerealiere)
 unique(Niger_pdm_2019$BanqueCerealiere)
 
@@ -8616,7 +8616,7 @@ Pour merger les bases, Niger_ea_2019, Niger_pdm_2019, Niger_ea_2020 et Niger_pdm
 
 
 
-```{r identification of dirty variables}
+```{r 1_identification of dirty variables}
 data <- Niger_pdm_2019
 
 # Fonction pour obtenir les types de labels
@@ -8718,7 +8718,7 @@ WFP_Niger <- WFP_Niger %>%
 
 
 
-```{r variables reorder}
+```{r _1variables reorder}
 
 WFP_Niger.sub <- WFP_Niger  %>% dplyr::select(ID, adm0_ocha, ADMIN0Name,adm1_ocha,ADMIN1Name,adm2_ocha,ADMIN2Name,SURVEY,YEAR,SvyDatePDM,HHHSex ,HHHAge, HHHEdu,everything())
 
